@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: Api Documentation
+  description: Api Documentation
+  version: "1.0"
+servers:
+  - url: http://localhost:9090/
+paths:
+  /s3/upload:
+    post:
+      tags:
+        - demo-controller
+      operationId: s3Uploader
+      requestBody:
+        description: new person data
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewPersonRequest'
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NewPersonSaveDone'
+components:
+  schemas:
+    NewPersonRequest:
+      type: object
+      properties:
+        ten:
+          type: string
+        tuoi:
+          type: integer
+        gioi:
+          type: string
+    NewPersonSaveDone:
+      type: object
+      properties:
+        mesaage:
+          type: string
+        code:
+          type: integer

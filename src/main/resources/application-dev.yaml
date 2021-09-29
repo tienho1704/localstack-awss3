@@ -1,0 +1,19 @@
+#=====aws=====#
+aws:
+  local:
+    endpoint: http://localhost:4566/
+    id: test
+    key: test
+    region: us-east-1
+
+#=====mysql=====#
+spring:
+  datasource:
+    #    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/people_management
+    username: root
+    password: 5CG127069G
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
